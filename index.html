@@ -1826,6 +1826,472 @@
             justify-content: center;
             margin: 0 auto 20px;
         }
+
+        /* ================================================
+           MOBILE RESPONSIVENESS — Full Overhaul
+           ================================================ */
+
+        /* ---------- Extra-small screens (< 480px) ---------- */
+        @media (max-width: 479px) {
+
+            /* Top notice bar: hide text, keep phone */
+            .top-notice-text span {
+                display: none;
+            }
+
+            .top-social-links {
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            .top-social-links a span {
+                display: none;
+            }
+
+            /* Header */
+            .nav-row {
+                height: 68px;
+            }
+
+            .brand-logo-img {
+                height: 40px;
+            }
+
+            .brand-text .title {
+                font-size: 17px;
+            }
+
+            .brand-text .sub {
+                font-size: 9px;
+                letter-spacing: 0.14em;
+            }
+
+            /* Hide social icon buttons & CTA in nav on xs */
+            .nav-actions .social-icon-btn {
+                display: none;
+            }
+
+            .nav-actions .btn-primary {
+                display: none;
+            }
+
+            /* Hero */
+            .hero-section {
+                padding: 48px 0 56px;
+            }
+
+            .hero-title {
+                font-size: 32px;
+                line-height: 1.15;
+            }
+
+            .hero-description {
+                font-size: 15px;
+                margin-bottom: 28px;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+                gap: 12px;
+                margin-bottom: 32px;
+            }
+
+            .hero-cta-group .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Stats: 1 column on xs */
+            .hero-stats-row {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            /* Hide floating badge on xs (too cramped) */
+            .hero-floating-badge {
+                display: none;
+            }
+
+            /* Section padding */
+            section.page-section {
+                padding: 60px 0;
+            }
+
+            .section-header {
+                margin-bottom: 36px;
+            }
+
+            .section-header h2 {
+                font-size: 30px;
+            }
+
+            /* Services highlight banner */
+            .services-highlight-banner {
+                padding: 36px 20px;
+            }
+
+            .highlight-content h3 {
+                font-size: 26px;
+            }
+
+            .highlight-quote {
+                font-size: 17px;
+            }
+
+            /* Gallery tabs scrollable */
+            .gallery-tabs-wrap {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                justify-content: flex-start;
+                gap: 8px;
+                padding-bottom: 8px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+
+            .gallery-tabs-wrap::-webkit-scrollbar {
+                display: none;
+            }
+
+            .gallery-tab-btn {
+                white-space: nowrap;
+                flex-shrink: 0;
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+
+            /* Estimator panel */
+            .estimator-interactive-panel {
+                padding: 32px 20px;
+            }
+
+            .estimator-interactive-panel h3 {
+                font-size: 26px;
+            }
+
+            /* Range slider */
+            .range-slider-wrap {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+                padding: 14px 16px;
+            }
+
+            .range-slider-wrap input[type=range] {
+                width: 100%;
+            }
+
+            .slider-display-value {
+                text-align: left;
+                min-width: auto;
+                font-size: 26px;
+            }
+
+            /* Estimator summary panel */
+            .estimator-summary-panel {
+                padding: 32px 20px;
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .total-estimation-box .total-amount-range {
+                font-size: 28px;
+            }
+
+            /* Social community section */
+            .social-community-section {
+                padding: 60px 0;
+            }
+
+            .social-banner-card {
+                padding: 28px 20px;
+            }
+
+            /* Why section */
+            .why-section {
+                padding: 60px 0;
+            }
+
+            /* Footer */
+            footer {
+                padding: 56px 0 24px;
+            }
+
+            /* Floating WhatsApp: icon only */
+            .floating-wa-btn span {
+                display: none;
+            }
+
+            .floating-wa-btn {
+                padding: 14px;
+                border-radius: 50%;
+            }
+
+            /* Gallery Modal */
+            .modal-image-wrap {
+                height: 220px;
+            }
+
+            .modal-body {
+                padding: 20px 20px;
+            }
+
+            .modal-body .m-title {
+                font-size: 22px;
+            }
+
+            .modal-body .m-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            /* Toast Card */
+            .toast-card {
+                padding: 32px 20px;
+            }
+
+            /* Proof strip items */
+            .proof-flex {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+        }
+
+        /* ---------- Small screens (480px – 767px) ---------- */
+        @media (min-width: 480px) and (max-width: 767px) {
+
+            /* Top notice bar: shrink text */
+            .top-notice-text span {
+                font-size: 11px;
+            }
+
+            .top-social-links a span {
+                display: none;
+            }
+
+            .top-social-links {
+                gap: 12px;
+            }
+
+            /* Header */
+            .nav-row {
+                height: 74px;
+            }
+
+            /* Hide social icon buttons in nav */
+            .nav-actions .social-icon-btn {
+                display: none;
+            }
+
+            /* Hero */
+            .hero-section {
+                padding: 56px 0 64px;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .hero-description {
+                font-size: 16px;
+            }
+
+            .hero-cta-group {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-cta-group .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Stats: 1 column */
+            .hero-stats-row {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            /* Gallery tabs scrollable */
+            .gallery-tabs-wrap {
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                justify-content: flex-start;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+            }
+
+            .gallery-tabs-wrap::-webkit-scrollbar {
+                display: none;
+            }
+
+            .gallery-tab-btn {
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+
+            /* Section padding */
+            section.page-section {
+                padding: 72px 0;
+            }
+
+            .section-header h2 {
+                font-size: 34px;
+            }
+
+            /* Services highlight */
+            .services-highlight-banner {
+                padding: 40px 28px;
+            }
+
+            /* Estimator panels */
+            .estimator-interactive-panel {
+                padding: 40px 28px;
+            }
+
+            .estimator-summary-panel {
+                padding: 40px 28px;
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            .range-slider-wrap {
+                flex-direction: column;
+                gap: 12px;
+                align-items: flex-start;
+            }
+
+            .range-slider-wrap input[type=range] {
+                width: 100%;
+            }
+
+            .slider-display-value {
+                text-align: left;
+                min-width: auto;
+            }
+
+            /* Floating WA icon only */
+            .floating-wa-btn span {
+                display: none;
+            }
+
+            .floating-wa-btn {
+                padding: 14px;
+                border-radius: 50%;
+            }
+
+            /* Modal */
+            .modal-image-wrap {
+                height: 260px;
+            }
+
+            .modal-body {
+                padding: 22px 24px;
+            }
+
+            .modal-body .m-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* ---------- Medium screens (768px – 1023px) ---------- */
+        @media (min-width: 768px) and (max-width: 1023px) {
+
+            /* Hero: 2-column but tighter */
+            .hero-section {
+                padding: 64px 0 72px;
+            }
+
+            .hero-title {
+                font-size: 44px;
+            }
+
+            /* Stats: still 3-col but compact */
+            .stat-card .number {
+                font-size: 30px;
+            }
+
+            /* Estimator summary panel — goes below on tablet since 1-col */
+            .estimator-summary-panel {
+                border-left: none;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+            }
+
+            /* Gallery tabs overflow on tablet */
+            .gallery-tabs-wrap {
+                flex-wrap: wrap;
+            }
+
+            /* Services highlight banner: single col on tablet */
+            .services-highlight-banner {
+                padding: 48px 36px;
+            }
+
+            /* Modal image height: reduce on tablet */
+            .modal-image-wrap {
+                height: 320px;
+            }
+        }
+
+        /* ---------- Utility: Touch-friendly tap targets ---------- */
+        @media (max-width: 1023px) {
+
+            /* Bigger tap targets for links */
+            .mobile-nav-links a {
+                min-height: 48px;
+                display: flex;
+                align-items: center;
+            }
+
+            .pill-choice {
+                min-height: 44px;
+            }
+
+            .gallery-tab-btn {
+                min-height: 44px;
+            }
+
+            .extra-toggle-item {
+                min-height: 52px;
+            }
+
+            /* Form inputs — larger on touch */
+            .form-input-field {
+                padding: 15px 16px;
+                font-size: 16px; /* prevents iOS zoom */
+            }
+
+            /* Service card action: stack vertically */
+            .service-card-action {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            /* Summary row val: allow wrap */
+            .summary-row-item .item-val {
+                max-width: 160px;
+            }
+
+            /* WhatsApp sticky: show on mobile bottom */
+            .floating-wa-btn {
+                bottom: 16px;
+                right: 16px;
+            }
+
+            /* Nav row: tighter gap */
+            .nav-actions {
+                gap: 8px;
+            }
+
+            /* Hero visual: margin top when stacked */
+            .hero-visual-col {
+                margin-top: 0;
+            }
+        }
+
     </style>
 </head>
 
