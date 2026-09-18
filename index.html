@@ -2260,7 +2260,8 @@
             /* Form inputs — larger on touch */
             .form-input-field {
                 padding: 15px 16px;
-                font-size: 16px; /* prevents iOS zoom */
+                font-size: 16px;
+                /* prevents iOS zoom */
             }
 
             /* Service card action: stack vertically */
@@ -2291,7 +2292,6 @@
                 margin-top: 0;
             }
         }
-
     </style>
 </head>
 
@@ -3303,7 +3303,7 @@
                             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                         </svg>
-                        <span>Rejoindre @traiteurbenyedder sur Instagram</span>
+                        <span>Rejoindre la page Instagram</span>
                     </a>
                 </div>
 
@@ -3602,35 +3602,35 @@
     <!-- Application Logic -->
     <script>
         (function () {
-  // Image path auto-resolver across folder structures
-  function attachImageFallbacks() {
-    document.querySelectorAll('img').forEach(function(img) {
-      if (img.dataset.fallbackAttached) return;
-      img.dataset.fallbackAttached = "true";
-      img.addEventListener('error', function() {
-        var current = this.getAttribute('src') || '';
-        var filename = current.split('/').pop();
-        if (!filename) return;
-        var tried = parseInt(this.dataset.retryIndex || '0', 10);
-        var candidates = [
-          'traiteur-assets/' + filename,
-          'assets/' + filename,
-          'images/' + filename,
-          filename
-        ];
-        if (tried < candidates.length) {
-          this.dataset.retryIndex = (tried + 1).toString();
-          var nextSrc = candidates[tried];
-          if (nextSrc === current && tried + 1 < candidates.length) {
-            this.dataset.retryIndex = (tried + 2).toString();
-            nextSrc = candidates[tried + 1];
-          }
-          this.src = nextSrc;
-        }
-      });
-    });
-  }
-  attachImageFallbacks();
+            // Image path auto-resolver across folder structures
+            function attachImageFallbacks() {
+                document.querySelectorAll('img').forEach(function (img) {
+                    if (img.dataset.fallbackAttached) return;
+                    img.dataset.fallbackAttached = "true";
+                    img.addEventListener('error', function () {
+                        var current = this.getAttribute('src') || '';
+                        var filename = current.split('/').pop();
+                        if (!filename) return;
+                        var tried = parseInt(this.dataset.retryIndex || '0', 10);
+                        var candidates = [
+                            'traiteur-assets/' + filename,
+                            'assets/' + filename,
+                            'images/' + filename,
+                            filename
+                        ];
+                        if (tried < candidates.length) {
+                            this.dataset.retryIndex = (tried + 1).toString();
+                            var nextSrc = candidates[tried];
+                            if (nextSrc === current && tried + 1 < candidates.length) {
+                                this.dataset.retryIndex = (tried + 2).toString();
+                                nextSrc = candidates[tried + 1];
+                            }
+                            this.src = nextSrc;
+                        }
+                    });
+                });
+            }
+            attachImageFallbacks();
 
             // Mobile menu toggle
             var menuBtn = document.getElementById('mobileMenuBtn');
